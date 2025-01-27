@@ -1,0 +1,537 @@
+/* Estilos gerais */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+   background-color: #D99D8F;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #000000;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+strong {
+  color: #1D2540;
+  background-color: rgba(242, 240, 213, 0.5);
+  padding: 0 5px;
+}
+/* Container geral da página */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+/* Cabeçalho */
+header {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  color: #212B40;
+  padding: 20px 0;
+  text-align: center;
+  box-sizing: border-box;
+  background-image: url(img/fundo.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px 0;
+  flex-direction: row;
+}
+
+
+.info h1 {
+  font-size: 80px;
+  margin-bottom: 10px;
+  text-shadow: 25px 30px 8px #1A2040;
+}
+.info p{
+  font-size: 30px;
+  font-weight: bolder;
+  margin-top: 0;
+}
+
+.profile-image {
+  margin-left: 20px;
+  margin-right: 50px;
+}
+
+.profile-image img {
+  width: 350px;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+  object-fit: cover;
+  margin: 0 ;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8);
+}
+
+header h1 {
+  margin-bottom: 5px;
+}
+
+header p {
+  font-size: 0.9em;
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+.icon {
+  width: 45px;
+  height: 45px;
+  margin: 5px 25px;
+  vertical-align: middle;
+  border-radius: 25px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8)
+}
+
+.info .contact-list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style: none;
+}
+
+.info ul {
+  list-style: none;
+  padding: 0;
+  text-align: left;
+}
+
+.info .contact {
+  display: flex;
+  align-items: center;
+  padding: 5px 0;
+  text-align: left;
+  justify-content: flex-start;
+}
+
+/* Menu */
+.menu {
+  background-color: rgba(2, 11, 38, 0.7);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.menu .container {
+  display: flex;
+  justify-content: center;
+}
+
+.menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.menu-list li {
+  margin: 5px 10px;
+  position: relative;
+}
+
+.menu-list a {
+  color: wheat;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-align: center;
+}
+
+.menu-list a:hover {
+  text-decoration: underline;
+}
+
+.dropdown .dropbtn {
+  color: wheat;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #333;
+  min-width: 200px;
+  z-index: 1;
+  right: 0;
+}
+
+.dropdown-content a {
+  color: #fff;
+  padding: 10px 15px;
+  display: block;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #555;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Seções principais da página */
+main {
+  background-color: rgba(242, 240, 213, 0.5);
+  width: 100%;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+main h2 {
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: rgba(49, 62, 89, 0.6);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  color: wheat;
+}
+
+/* Estilo para as seções de Experiência */
+.experience .job {
+  margin-bottom: 20px;
+  display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    display: inline-block;
+/*     border-bottom: 10px solid white;*/
+}
+
+.experience .job .job-content .job-desc{
+  background-color: rgba(217, 157, 143, 0.6);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.about .job-desc{
+  background-color: rgba(217, 157, 143, 0.6);
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  text-align: center;
+}
+
+.experience .job > .job-content{
+    flex: 1;
+    min-width: 50%;
+    padding-right: 20px;
+    box-sizing: border-box;
+}
+
+.experience .bolder-skill {
+  font-weight: bolder;
+}
+
+.experience .job h3 {
+  margin-bottom: 0px;
+  background-color: #1A2040;
+  padding: 0 30px;
+  color: wheat;
+}
+
+.experience .job .job-content h4{
+  text-align: center;
+  color: #1A2040;
+  font-weight: bolder;
+  font-size: 30px;
+  margin: 0;
+  text-shadow: 0 8px 12px rgba(0, 0, 0, 0.7);
+}
+
+.radar-container h4 {
+/*   background-color: rgba(0, 0, 0, 0.3); */
+  color: #1A2040;
+  text-align: center;
+}
+.experience .job .date {
+  font-style: italic;
+  font-weight: bolder;
+  color: #2b2828;
+  margin-bottom: 0px;
+}
+
+.experience .job > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.experience .job > div h3,
+.experience .job > div p.date {
+  flex: 1 1 50%;
+  text-align: center;
+}
+
+/* Seção de Habilidades (Gráfico) */
+.skills {
+  width: 100%;
+  margin-top: 20px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.skills-chart-container {
+  width: calc(50% - 30px);
+  text-align: center;
+}
+
+.skills-chart-container h3{
+background-color: #1A2040;
+color: wheat;
+}
+
+.skills div h3{
+  background-color: #1A2040;
+  color: wheat;
+}
+
+.skills div blockquote{
+  background-color: rgba(217, 157, 143, 0.6);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.skills-chart-container canvas {
+  max-width: 100%;
+  max-height: 500px;
+  margin: 20px auto;
+  width: 100% !important;
+  height: auto !important;
+  box-sizing: border-box;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.radar-container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.radar-chart-container {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  margin: 10px 10px;
+}
+
+.radar-chart-container canvas{
+  max-width: 100%;
+  max-height: 500px;
+  margin: 0 10px;
+  width: 100% !important;
+  height: auto;
+  justify-content: center;
+  border-bottom: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Seções de Formação e Certificações */
+.education-item,
+.certification-item {
+  margin-bottom: 15px;
+  padding-left: 20px;
+  box-sizing: border-box;
+  font-size: 14px;
+  text-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+}
+
+.education-item h3,
+.certification-item h3 {
+  margin-bottom: 5px;
+}
+
+.education-item h3 strong{
+  color: #070707;
+}
+
+/* Portfólio */
+.portfolio {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.portfolio .tableau-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.portfolio .tableauPlaceholder {
+  width: calc(50% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+}
+
+.portfolio .tableauPlaceholder a img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  width: 100%;
+  padding: 1px 0;
+  background-color: #333;
+  color: #fff;
+  position: relative;
+  clear: both;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.7)
+}
+
+/* Botão Voltar ao Topo */
+.back-to-top-button {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #6C808C;
+    color: black;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    text-decoration: none;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 8px 16px rgba(250, 250, 250, 0.8);
+}
+
+/* Container para Formação e Certificações */
+.side-by-side-sections {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+/* Estilo para as seções de Formação e Certificações */
+.side-by-side-sections section {
+  width: calc(50% - 40px);
+  box-sizing: border-box;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+      width: 95%;
+  }
+  .side-by-side-sections section {
+      width: 100%;
+  }
+   .experience .job{
+      flex-direction: column;
+    }
+    .experience .job > .job-content{
+        min-width: 100%;
+        padding-right: 0;
+        margin-bottom: 10px;
+    }
+  .radar-chart-container {
+        max-width: 100%;
+    margin: 10px auto;
+    }
+    .skills-chart-container {
+        width: calc(100% - 20px);
+    }
+    .skills canvas {
+        max-width: 100%;
+        max-height: 300px;
+    }
+
+    .portfolio .tableauPlaceholder {
+        width: calc(100% - 20px);
+    }
+
+    .portfolio .tableauPlaceholder a img {
+        max-height: 300px;
+    }
+
+    .header-content{
+        flex-direction: column;
+        align-items: center;
+    }
+        .profile-image{
+        margin-left: 0;
+            margin-bottom: 20px;
+    }
+
+    .info h1{
+        font-size: 30px;
+        text-align: center;
+    }
+    .profile-image img{
+        width: 150px;
+    }
+        .experience .job > div {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info ul {
+        text-align: center;
+    }
+.info .contact {
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+}
+}
+
+@media (max-width: 480px) {
+  .menu-list li {
+      margin: 5px 5px;
+  }
+
+  .portfolio .tableauPlaceholder {
+      width: 100%;
+  }
+}
