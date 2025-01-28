@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             font: { weight: 'bold', size: 14 },
                              
                         },
-                        grid: { display: false }
+                        grid: { display: false },                        
                     },
                     y: {
                         beginAtZero: true,
