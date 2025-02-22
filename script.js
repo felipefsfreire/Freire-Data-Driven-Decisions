@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', function() {
                         ticks: {
                             stepSize: 2,
                             color: 'black',
-                            font: { weight: 'bold', size: 14 },
-                             
+                            font: { weight: 'bold', size: 9 },
+
                         },
-                        grid: { display: false },                        
+                        grid: { display: false },
                     },
                     y: {
                         beginAtZero: true,
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         'personalSkillsChart'
     );
-    
+
     // Dados e criação dos gráficos radar para Grupo CVLB
         createRadarChart(
           document.getElementById('radarChart1T').getContext('2d'),
@@ -190,8 +190,8 @@ document.addEventListener('DOMContentLoaded', function() {
           },
           'radarChart1T'
          );
-    
-    
+
+
          createRadarChart(
           document.getElementById('radarChart1P').getContext('2d'),
         ['Apoio à Tomada\nde Decisões', 'Pensamento\nCrítico', 'Foco nos\nIndicadores\nOperacionais', 'Trabalho em\nEquipe', 'Gestão de\nTempo', 'Comunicação\nde Resultados'],
@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', function() {
           },
              'radarChart1P'
         );
-    
+
       // Dados e criação dos gráficos radar para iFood
          createRadarChart(
             document.getElementById('radarChart2T').getContext('2d'),
@@ -214,7 +214,7 @@ document.addEventListener('DOMContentLoaded', function() {
            },
             'radarChart2T'
         );
-    
+
         createRadarChart(
            document.getElementById('radarChart2P').getContext('2d'),
            ['Comunicação Clara\ncom Stakeholders', 'Trabalho\nCross-Functional', 'Foco na\nExperiência\ndo Cliente', 'Resolução de\nProblemas', 'Colaboração','Adaptabilidade'],
@@ -225,7 +225,7 @@ document.addEventListener('DOMContentLoaded', function() {
            },
             'radarChart2P'
         );
-        
+
           // Dados e criação dos gráficos radar para H&M Sushi
         createRadarChart(
           document.getElementById('radarChart3T').getContext('2d'),
@@ -247,6 +247,35 @@ document.addEventListener('DOMContentLoaded', function() {
                 },
             'radarChart3P'
         );
+
+// script para menu hambúrguer
+    const menuToggle = document.querySelector('.menu-toggle input');
+    const nav = document.querySelector('.menu .container .menu-list');
+
+    menuToggle.addEventListener('click', function () {
+      nav.classList.toggle('slide');
+    });
+
+    // script para scroll suave
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        const targetId = this.getAttribute('href').substring(1);
+        const targetElement = document.getElementById(targetId);
+
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 50, // Ajuste para a altura do menu fixo
+            behavior: 'smooth'
+          });
+        }
+        // Fecha o menu no mobile após o clique
+        if (menuToggle.checked) {
+          menuToggle.click();
+        }
+      });
+    });
 });
 
 // Botão Voltar ao Topo

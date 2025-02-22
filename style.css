@@ -1,9 +1,9 @@
 /* Estilos gerais */
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Fira Code', sans-serif;
   margin: 0;
   padding: 0;
-   /* background-color: #D99D8F; */
+  /* background-color: #D99D8F; */
   background-image: url(img/fundo2.png);
   background-position: center;
   background-repeat: no-repeat;
@@ -19,6 +19,7 @@ strong {
   background-color: rgba(242, 240, 213, 0.5);
   padding: 0 5px;
 }
+
 /* Container geral da página */
 .container {
   width: 90%;
@@ -56,7 +57,8 @@ header {
   margin-bottom: 10px;
   text-shadow: 25px 30px 8px #1A2040;
 }
-.info p{
+
+.info p {
   font-size: 30px;
   font-weight: bolder;
   margin-top: 0;
@@ -73,8 +75,14 @@ header {
   border-radius: 50%;
   display: block;
   object-fit: cover;
-  margin: 0 ;
+  margin: 0;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionado transição */
+}
+
+.profile-image img:hover {
+  transform: scale(1.05); /* Aumenta o tamanho em 5% */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9); /* Aumenta a sombra */
 }
 
 header h1 {
@@ -100,7 +108,13 @@ header a:hover {
   margin: 5px 25px;
   vertical-align: middle;
   border-radius: 25px;
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8)
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionado transição */
+}
+
+.icon:hover {
+  transform: scale(1.1); /* Aumenta o tamanho em 10% */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9); /* Aumenta a sombra */
 }
 
 .info .contact-list {
@@ -124,7 +138,7 @@ header a:hover {
   justify-content: flex-start;
 }
 
-.download-button{
+.download-button {
   background-color: #1A2040;
   border-radius: 25px;
   padding: 10px 20px;
@@ -143,7 +157,62 @@ header a:hover {
 
 .menu .container {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  /* Alinha os itens horizontalmente */
+  align-items: center;
+  /* Alinha os itens verticalmente */
+}
+
+/* Estilos do menu hambúrguer */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  height: 20px;
+  justify-content: space-between;
+  position: relative;
+  margin: 10px;
+}
+
+.menu-toggle input {
+  position: absolute;
+  width: 40px;
+  height: 28px;
+  left: -6px;
+  top: -5px;
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  display: block;
+  width: 28px;
+  height: 3px;
+  background-color: wheat;
+  border-radius: 3px;
+  transition: all 0.5s;
+  transform-origin: 0 0;
+}
+
+.menu-toggle span:nth-child(2) {
+  transform-origin: 0 100%;
+}
+
+.menu-toggle span:last-child {
+  transform-origin: 0 0;
+}
+
+.menu-toggle input:checked~span:nth-child(2) {
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.menu-toggle input:checked~span:last-child {
+  transform: rotate(-45deg) translate(-1px, 0);
+}
+
+.menu-toggle input:checked~span:nth-child(3) {
+  opacity: 0;
+  transform: scale(0);
 }
 
 .menu-list {
@@ -212,6 +281,64 @@ header a:hover {
   display: block;
 }
 
+/* Estilos para o menu responsivo */
+@media (max-width: 768px) {
+  .menu .container {
+      justify-content: space-between;
+      /* Garante que o menu-toggle fique no canto */
+  }
+
+  .menu-toggle {
+      display: flex;
+      margin-left: auto;
+  }
+
+  .menu-list {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      background-color: rgba(2, 11, 38, 0.9);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 10px 0;
+      clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+      transition: all 0.8s ease-in-out;
+  }
+
+  .menu-list.slide {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+  }
+
+  .menu-list li {
+      margin: 10px 0;
+  }
+
+  .menu-list a {
+      padding: 10px 20px;
+      display: block;
+      text-align: center;
+  }
+
+  .dropdown-content {
+      position: static;
+      background-color: transparent;
+      min-width: 100%;
+      box-shadow: none;
+      padding: 0;
+  }
+
+  .dropdown-content a {
+      padding: 10px 20px;
+      text-align: center;
+  }
+
+  .dropdown:hover .dropdown-content {
+      display: none;
+  }
+}
+
 /* Seções principais da página */
 main {
   background-color: rgba(242, 240, 213, 0.7);
@@ -233,34 +360,34 @@ main h2 {
 .experience .job {
   margin-bottom: 20px;
   display: flex;
-    align-items: flex-start;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    display: inline-block;
-/*     border-bottom: 10px solid white;*/
+  align-items: flex-start;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  display: inline-block;
+  /* border-bottom: 10px solid white;*/
 }
 
-.experience .job .job-content .job-desc{
-  background-color: rgba(217, 157, 143, 0.6);
+.experience .job .job-content .job-desc {
+  background-color: rgba(217, 157, 143, 0.9);
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
-.about .job-desc{
-  background-color: rgba(217, 157, 143, 0.6);
+.about .job-desc {
+  background-color: rgba(217, 157, 143, 0.9);
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   text-align: center;
 }
 
-.experience .job > .job-content{
-    flex: 1;
-    min-width: 50%;
-    padding-right: 20px;
-    box-sizing: border-box;
+.experience .job>.job-content {
+  flex: 1;
+  min-width: 50%;
+  padding-right: 20px;
+  box-sizing: border-box;
 }
 
 .experience .bolder-skill {
@@ -274,7 +401,7 @@ main h2 {
   color: wheat;
 }
 
-.experience .job .job-content h4{
+.experience .job .job-content h4 {
   text-align: center;
   color: #1A2040;
   font-weight: bolder;
@@ -288,6 +415,7 @@ main h2 {
   color: wheat;
   text-align: center;
 }
+
 .experience .job .date {
   font-style: italic;
   font-weight: bolder;
@@ -295,15 +423,15 @@ main h2 {
   margin-bottom: 0px;
 }
 
-.experience .job > div {
+.experience .job>div {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
 }
 
-.experience .job > div h3,
-.experience .job > div p.date {
+.experience .job>div h3,
+.experience .job>div p.date {
   flex: 1 1 50%;
   text-align: center;
 }
@@ -328,24 +456,24 @@ main h2 {
   text-align: center;
 }
 
-.skills-chart-container h3{
-background-color: #1A2040;
-color: wheat;
-}
-
-.skills div h3{
+.skills-chart-container h3 {
   background-color: #1A2040;
   color: wheat;
 }
 
-.skills div blockquote{
-  background-color: rgba(217, 157, 143, 0.6);
+.skills div h3 {
+  background-color: #1A2040;
+  color: wheat;
+}
+
+.skills div blockquote {
+  background-color: rgba(217, 157, 143, 0.9);
   border-radius: 15px;
   padding: 10px;
 }
 
 .skills div p {
-  background-color: rgba(217, 157, 143, 0.6);
+  background-color: rgba(217, 157, 143, 0.9);
   border-radius: 15px;
   padding: 10px;
 }
@@ -359,9 +487,16 @@ color: wheat;
   box-sizing: border-box;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   background-color: rgba(245, 222, 179, 0.7);
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionado transição */
 }
 
-.radar-container{
+.skills-chart-container canvas:hover {
+  transform: scale(1.03); /* Aumenta o tamanho em 3% */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8); /* Aumenta a sombra */
+}
+
+.radar-container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -374,7 +509,7 @@ color: wheat;
   margin: 10px 10px;
 }
 
-.radar-chart-container canvas{
+.radar-chart-container canvas {
   max-width: 100%;
   max-height: 500px;
   margin: 0 10px;
@@ -384,9 +519,16 @@ color: wheat;
   border-bottom: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   background-color: rgba(245, 222, 179, 0.7);
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionado transição */
 }
 
-.tools h3{
+.radar-chart-container canvas:hover {
+  transform: scale(1.03); /* Aumenta o tamanho em 3% */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8); /* Aumenta a sombra */
+}
+
+.tools h3 {
   background-color: #1A2040;
   color: wheat;
   text-align: center;
@@ -422,8 +564,15 @@ color: wheat;
   width: 100%;
   margin: 5px 25px;
   vertical-align: middle;
-  /* border-radius: 25px; */
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8)
+  background-color: rgba(245, 222, 179, 0.5);
+  border-radius: 5px;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionado transição */
+}
+
+.tools-item img:hover {
+  transform: scale(1.2); /* Aumenta o tamanho em 20% */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9); /* Aumenta a sombra */
 }
 
 /* Seções de Formação e Certificações */
@@ -441,7 +590,7 @@ color: wheat;
   margin-bottom: 5px;
 }
 
-.education-item h3 strong{
+.education-item h3 strong {
   color: #070707;
 }
 
@@ -470,6 +619,13 @@ color: wheat;
   height: auto;
   max-height: 400px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionado transição */
+}
+
+.portfolio .tableauPlaceholder a img:hover {
+  transform: scale(1.05); /* Aumenta o tamanho em 5% */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8); /* Aumenta a sombra */
 }
 
 /* Rodapé */
@@ -487,24 +643,36 @@ footer {
 
 /* Botão Voltar ao Topo */
 .back-to-top-button {
-    display: none;
-    position: fixed;
-    bottom: 20px;
-    right: 40px;
-    background-color: rgba(250, 250, 250, 0.8);
-    content: url(img/to_top.png);
-    color: black;
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    text-align: center;
-    line-height: 40px;
-    font-size: 24px;
-    text-decoration: none;
-    cursor: pointer;
-    z-index: 1000;
-    /* box-shadow: 0 8px 16px rgba(250, 250, 250, 0.8); */
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  background-color: rgba(250, 250, 250, 0.8);
+  content: url(img/to_top.png);
+  color: black;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 40px;
+  font-size: 24px;
+  text-decoration: none;
+  cursor: pointer;
+  z-index: 1000;
+  transition: all 0.3s easy-in-out;
+  /* box-shadow: 0 8px 16px rgba(250, 250, 250, 0.8); */
+}
+
+.back-to-top-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  background-color: rgba(250, 250, 250, 1);
+}
+
+.back-to-top-button:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 /* Container para Formação e Certificações */
@@ -525,75 +693,86 @@ footer {
   .container {
       width: 95%;
   }
+
   .side-by-side-sections section {
       width: 100%;
   }
-   .experience .job{
+
+  .experience .job {
       flex-direction: column;
-    }
-    .experience .job > .job-content{
-        min-width: 100%;
-        padding-right: 0;
-        margin-bottom: 10px;
-    }
+  }
+
+  .experience .job>.job-content {
+      min-width: 100%;
+      padding-right: 0;
+      margin-bottom: 10px;
+  }
+
   .radar-chart-container {
-        max-width: 100%;
-    margin: 10px auto;
-    }
-    .skills-chart-container {
-        width: calc(100% - 20px);
-    }
-    .skills canvas {
-        max-width: 100%;
-        max-height: 300px;
-    }
+      max-width: 100%;
+      margin: 10px auto;
+  }
 
-    .portfolio .tableauPlaceholder {
-        width: calc(100% - 20px);
-    }
+  .skills-chart-container {
+      width: calc(100% - 20px);
+  }
 
-    .portfolio .tableauPlaceholder a img {
-        max-height: 300px;
-    }
+  .skills canvas {
+      max-width: 100%;
+      max-height: 300px;
+  }
 
-    .header-content{
-        flex-direction: column;
-        align-items: center;
-    }
-        .profile-image{
-        margin-left: 0;
-            margin-bottom: 20px;
-    }
+  .portfolio .tableauPlaceholder {
+      width: calc(100% - 20px);
+  }
 
-    .info h1{
-        font-size: 30px;
-        text-align: center;
-    }
-    .profile-image img{
-        width: 150px;
-    }
-        .experience .job > div {
-        flex-direction: column;
-        text-align: center;
-    }
+  .portfolio .tableauPlaceholder a img {
+      max-height: 300px;
+  }
 
-    .info ul {
-        text-align: center;
-    }
-    .info .contact {
+  .header-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .profile-image {
+      margin-left: 0;
+      margin-bottom: 20px;
+  }
+
+  .info h1 {
+      font-size: 30px;
+      text-align: center;
+  }
+
+  .profile-image img {
+      width: 150px;
+  }
+
+  .experience .job>div {
+      flex-direction: column;
+      text-align: center;
+  }
+
+  .info ul {
+      text-align: center;
+  }
+
+  .info .contact {
       justify-content: center;
       text-align: center;
       flex-direction: column;
-    }
+  }
 
-    .tools ul {
+  .tools ul {
       text-align: center;
-    }
-    .tools .tools-item {
+  }
+
+  .tools .tools-item {
       justify-content: center;
       text-align: center;
       flex-direction: column;
-    }
+  }
 }
 
 @media (max-width: 480px) {
@@ -604,4 +783,26 @@ footer {
   .portfolio .tableauPlaceholder {
       width: 100%;
   }
+}
+
+/* Animação de pulso  */
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 0.8;
+  }
+
+  50% {
+      transform: scale(1.1);
+      opacity: 1;
+  }
+
+  100% {
+      transform: scale(1);
+      opacity: 0.8;
+  }
+}
+
+.back-to-top-button.pulse {
+  animation: pulse 2s infinite;
 }
