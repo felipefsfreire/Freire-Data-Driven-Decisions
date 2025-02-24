@@ -122,6 +122,20 @@ header a:hover {
   justify-content: center;
   padding: 0;
   list-style: none;
+  flex-wrap: wrap;
+}
+
+.info h1.contact {
+  font-size: 80px;
+  margin-bottom: 10px;
+  text-shadow: 25px 30px 8px #1A2040;
+  background-image: linear-gradient(-45deg, #1A2040, #313A60); /* Seu gradiente */
+  color: transparent; /* Torna o texto transparente para que o fundo apareça */
+  background-clip: text; /* Recorta o fundo para preencher o texto */
+  -webkit-background-clip: text; /* Para navegadores antigos (Safari) */
+  -webkit-text-fill-color: transparent; /* Para navegadores antigos (Safari) */
+  transition: background-position 0.5s ease; /* Adiciona uma transição suave na posição do background */
+  background-size: 200% auto; /* Aumenta o tamanho do background */
 }
 
 .info ul {
@@ -139,12 +153,23 @@ header a:hover {
 }
 
 .download-button {
-  background-color: #1A2040;
+  /* background-color: #1A2040; */
+  /* background-image: linear-gradient(to right, #1A2040, #313A60); */
+  /* background-image: linear-gradient(45deg, #1A2040, #313A60); */ /* Gradiente diagonal */
+  background-image: linear-gradient(to right, #1A2040, #242C50, #313A60); /* Gradiente com três cores */
   border-radius: 25px;
   padding: 10px 20px;
   color: rgba(242, 240, 213, 1);
-  font-weight: bolder;
+  /* font-weight: bolder; */
   box-shadow: 0 8px 16px rgba(250, 250, 250, 0.8);
+  transition: background-position 0.5s ease; /* Adiciona uma transição suave na posição do background */
+  background-size: 200% auto; /* Aumenta o tamanho do background */
+  animation: pulse 2s infinite; /* Adiciona a animação de pulso */
+}
+
+.download-button:hover {
+  background-position: right center; /* Move o gradiente para a direita */
+  color: #fff; /* Altera a cor do texto */
 }
 
 /* Menu */
