@@ -77,12 +77,12 @@ header {
   object-fit: cover;
   margin: 0;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionado transição */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .profile-image img:hover {
-  transform: scale(1.05); /* Aumenta o tamanho em 5% */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9); /* Aumenta a sombra */
+  transform: scale(1.05);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
 }
 
 header h1 {
@@ -109,12 +109,12 @@ header a:hover {
   vertical-align: middle;
   border-radius: 25px;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionado transição */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .icon:hover {
-  transform: scale(1.1); /* Aumenta o tamanho em 10% */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9); /* Aumenta a sombra */
+  transform: scale(1.1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
 }
 
 .info .contact-list {
@@ -129,13 +129,13 @@ header a:hover {
   font-size: 80px;
   margin-bottom: 10px;
   text-shadow: 25px 30px 8px #1A2040;
-  background-image: linear-gradient(-45deg, #1A2040, #313A60); /* Seu gradiente */
-  color: transparent; /* Torna o texto transparente para que o fundo apareça */
-  background-clip: text; /* Recorta o fundo para preencher o texto */
-  -webkit-background-clip: text; /* Para navegadores antigos (Safari) */
-  -webkit-text-fill-color: transparent; /* Para navegadores antigos (Safari) */
-  transition: background-position 0.5s ease; /* Adiciona uma transição suave na posição do background */
-  background-size: 200% auto; /* Aumenta o tamanho do background */
+  background-image: linear-gradient(-45deg, #1A2040, #313A60);
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-position 0.5s ease;
+  background-size: 200% auto;
 }
 
 .info ul {
@@ -153,23 +153,18 @@ header a:hover {
 }
 
 .download-button {
-  /* background-color: #1A2040; */
-  /* background-image: linear-gradient(to right, #1A2040, #313A60); */
-  /* background-image: linear-gradient(45deg, #1A2040, #313A60); */ /* Gradiente diagonal */
-  background-image: linear-gradient(to right, #1A2040, #242C50, #313A60); /* Gradiente com três cores */
+  background-image: linear-gradient(to right, #1A2040, #242C50, #313A60);
   border-radius: 25px;
   padding: 10px 20px;
   color: rgba(242, 240, 213, 1);
-  /* font-weight: bolder; */
   box-shadow: 0 8px 16px rgba(250, 250, 250, 0.8);
-  transition: background-position 0.5s ease; /* Adiciona uma transição suave na posição do background */
-  background-size: 200% auto; /* Aumenta o tamanho do background */
-  animation: pulse 2s infinite; /* Adiciona a animação de pulso */
+  transition: background-position 0.5s ease;
+  background-size: 200% auto;
 }
 
 .download-button:hover {
-  background-position: right center; /* Move o gradiente para a direita */
-  color: #fff; /* Altera a cor do texto */
+  background-position: right center;
+  color: #fff;
 }
 
 /* Menu */
@@ -183,9 +178,7 @@ header a:hover {
 .menu .container {
   display: flex;
   justify-content: space-between;
-  /* Alinha os itens horizontalmente */
   align-items: center;
-  /* Alinha os itens verticalmente */
 }
 
 /* Estilos do menu hambúrguer */
@@ -310,7 +303,6 @@ header a:hover {
 @media (max-width: 768px) {
   .menu .container {
       justify-content: space-between;
-      /* Garante que o menu-toggle fique no canto */
   }
 
   .menu-toggle {
@@ -513,12 +505,12 @@ main h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   background-color: rgba(245, 222, 179, 0.7);
   border-radius: 5px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionado transição */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .skills-chart-container canvas:hover {
-  transform: scale(1.03); /* Aumenta o tamanho em 3% */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8); /* Aumenta a sombra */
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
 }
 
 .radar-container {
@@ -545,12 +537,12 @@ main h2 {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   background-color: rgba(245, 222, 179, 0.7);
   border-radius: 5px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionado transição */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .radar-chart-container canvas:hover {
-  transform: scale(1.03); /* Aumenta o tamanho em 3% */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8); /* Aumenta a sombra */
+  transform: scale(1.03);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
 }
 
 .tools h3 {
@@ -592,12 +584,12 @@ main h2 {
   background-color: rgba(245, 222, 179, 0.5);
   border-radius: 5px;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionado transição */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .tools-item img:hover {
-  transform: scale(1.2); /* Aumenta o tamanho em 20% */
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9); /* Aumenta a sombra */
+  transform: scale(1.2);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.9);
 }
 
 /* Seções de Formação e Certificações */
@@ -633,7 +625,7 @@ main h2 {
 }
 
 .portfolio .tableauPlaceholder {
-  width: calc(50% - 20px);
+  width: calc(25% - 20px); /* Alterado para 25% */
   margin: 10px;
   box-sizing: border-box;
 }
@@ -642,15 +634,15 @@ main h2 {
   display: block;
   width: 100%;
   height: auto;
-  max-height: 400px;
+  max-height: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   border-radius: 5px;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Adicionado transição */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .portfolio .tableauPlaceholder a img:hover {
-  transform: scale(1.05); /* Aumenta o tamanho em 5% */
-  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8); /* Aumenta a sombra */
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.8);
 }
 
 /* Rodapé */
@@ -714,6 +706,18 @@ footer {
 }
 
 /* Responsividade */
+@media (max-width: 1200px) {
+  .portfolio .tableauPlaceholder {
+    width: calc(33.33% - 20px); /* 3 imagens por linha em telas maiores */
+  }
+}
+
+@media (max-width: 992px) {
+  .portfolio .tableauPlaceholder {
+    width: calc(50% - 20px); /* 2 imagens por linha em telas médias */
+  }
+}
+
 @media (max-width: 768px) {
   .container {
       width: 95%;
@@ -748,7 +752,7 @@ footer {
   }
 
   .portfolio .tableauPlaceholder {
-      width: calc(100% - 20px);
+      width: calc(50% - 20px); /* 2 imagens por linha em telas menores */
   }
 
   .portfolio .tableauPlaceholder a img {
@@ -806,7 +810,7 @@ footer {
   }
 
   .portfolio .tableauPlaceholder {
-      width: 100%;
+      width: 100%; /* 1 imagem por linha em telas ainda menores */
   }
 }
 
