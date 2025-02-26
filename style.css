@@ -3,20 +3,15 @@ body {
   font-family: 'Fira Code', sans-serif;
   margin: 0;
   padding: 0;
-  /* background-color: #D99D8F; */
-  background-image: url(img/fundo2.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-attachment: fixed;
+  background-color: #D2EAF3; /* Cor de fundo geral mais clara */
   color: #000000;
   line-height: 1.6;
   overflow-x: hidden;
 }
 
 strong {
-  color: #1D2540;
-  background-color: rgba(242, 240, 213, 0.5);
+  color: #022398; /* Cor do texto "strong" */
+  background-color: rgba(210, 234, 243, 0.5); /* Fundo levemente colorido */
   padding: 0 5px;
 }
 
@@ -37,10 +32,13 @@ header {
   padding: 20px 0;
   text-align: center;
   box-sizing: border-box;
-  background-image: url(img/fundo.jpg);
+  background-image: url(img/Gemini_fundo1.jpeg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center center;
   background-attachment: fixed;
+  background-color: #2046C5; /* Cor de fundo do cabeçalho */
+  color: #D2EAF3; /* Cor do texto no cabeçalho */
 }
 
 .header-content {
@@ -51,11 +49,10 @@ header {
   flex-direction: row;
 }
 
-
 .info h1 {
   font-size: 80px;
   margin-bottom: 10px;
-  text-shadow: 25px 30px 8px #1A2040;
+  /* text-shadow: 25px 30px 8px #022398; */
 }
 
 .info p {
@@ -94,7 +91,7 @@ header p {
 }
 
 header a {
-  color: #fff;
+  color: #D2EAF3; /* Cor dos links no cabeçalho */
   text-decoration: none;
 }
 
@@ -128,8 +125,8 @@ header a:hover {
 .info h1.contact {
   font-size: 80px;
   margin-bottom: 10px;
-  text-shadow: 25px 30px 8px #1A2040;
-  background-image: linear-gradient(-45deg, #1A2040, #313A60);
+  /* text-shadow: 25px 30px 8px #022398; */
+  background-image: linear-gradient(-45deg, #022398, #3977E9); /* Degradê no título */
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
@@ -153,23 +150,25 @@ header a:hover {
 }
 
 .download-button {
-  background-image: linear-gradient(to right, #1A2040, #242C50, #313A60);
+  background-image: linear-gradient(to right, #022398, #2046C5, #3977E9); /* Degradê no botão */
   border-radius: 25px;
   padding: 10px 20px;
-  color: rgba(242, 240, 213, 1);
-  box-shadow: 0 8px 16px rgba(250, 250, 250, 0.8);
+  color: #D2EAF3;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
   transition: background-position 0.5s ease;
   background-size: 200% auto;
+  text-decoration: none;
 }
 
 .download-button:hover {
   background-position: right center;
   color: #fff;
+  text-decoration: none;
 }
 
 /* Menu */
 .menu {
-  background-color: rgba(2, 11, 38, 0.7);
+  background-color: rgba(2, 35, 152, 0.7); /* Cor do menu */
   position: sticky;
   top: 0;
   z-index: 100;
@@ -206,7 +205,7 @@ header a:hover {
   display: block;
   width: 28px;
   height: 3px;
-  background-color: wheat;
+  background-color: #D2EAF3; /* Cor das linhas do menu hambúrguer */
   border-radius: 3px;
   transition: all 0.5s;
   transform-origin: 0 0;
@@ -248,7 +247,7 @@ header a:hover {
 }
 
 .menu-list a {
-  color: wheat;
+  color: #D2EAF3; /* Cor dos links do menu */
   text-decoration: none;
   padding: 10px;
   display: block;
@@ -260,7 +259,7 @@ header a:hover {
 }
 
 .dropdown .dropbtn {
-  color: wheat;
+  color: #D2EAF3; /* Cor do texto do dropdown */
   text-decoration: none;
   padding: 10px;
   display: block;
@@ -277,21 +276,21 @@ header a:hover {
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: #333;
+  background-color: #022398; /* Cor do fundo do dropdown */
   min-width: 200px;
   z-index: 1;
   right: 0;
 }
 
 .dropdown-content a {
-  color: #fff;
+  color: #D2EAF3; /* Cor dos links do dropdown */
   padding: 10px 15px;
   display: block;
   text-decoration: none;
 }
 
 .dropdown-content a:hover {
-  background-color: #555;
+  background-color: #2046C5; /* Cor do fundo do link no hover */
   text-decoration: none;
 }
 
@@ -315,7 +314,7 @@ header a:hover {
       top: 100%;
       left: 0;
       width: 100%;
-      background-color: rgba(2, 11, 38, 0.9);
+      background-color: rgba(2, 35, 152, 0.9); /* Cor do menu responsivo */
       flex-direction: column;
       align-items: center;
       justify-content: center;
@@ -358,7 +357,7 @@ header a:hover {
 
 /* Seções principais da página */
 main {
-  background-color: rgba(242, 240, 213, 0.7);
+  background-color: rgba(210, 234, 243, 0.7); /* Fundo da main */
   width: 100%;
   padding: 15px;
   box-sizing: border-box;
@@ -368,9 +367,9 @@ main h2 {
   padding-bottom: 10px;
   margin-bottom: 20px;
   text-align: center;
-  background-color: rgba(49, 62, 89, 0.8);
+  background-image: linear-gradient(to right, #022398, #2046C5); /* Degradê no título h2 */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  color: wheat;
+  color: #D2EAF3;
 }
 
 /* Estilo para as seções de Experiência */
@@ -382,18 +381,17 @@ main h2 {
   justify-content: center;
   gap: 20px;
   display: inline-block;
-  /* border-bottom: 10px solid white;*/
 }
 
 .experience .job .job-content .job-desc {
-  background-color: rgba(217, 157, 143, 0.9);
+  background-color: rgba(175, 219, 255, 0.8); /* Cor do job-desc */
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
 }
 
 .about .job-desc {
-  background-color: rgba(217, 157, 143, 0.9);
+  background-color: rgba(175, 219, 255, 0.8); /* Cor do job-desc */
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
@@ -413,14 +411,14 @@ main h2 {
 
 .experience .job h3 {
   margin-bottom: 0px;
-  background-color: #1A2040;
+  background-image: linear-gradient(to right, #022398, #2046C5); /* Degradê no título h3 */
   padding: 0 30px;
-  color: wheat;
+  color: #D2EAF3;
 }
 
 .experience .job .job-content h4 {
   text-align: center;
-  color: #1A2040;
+  color: #022398; /* Cor do título h4 */
   font-weight: bolder;
   font-size: 30px;
   margin: 0;
@@ -428,8 +426,8 @@ main h2 {
 }
 
 .radar-container h4 {
-  background-color: #1A2040;
-  color: wheat;
+  background-color: #022398; /* Cor do título h4 do radar */
+  color: #D2EAF3;
   text-align: center;
 }
 
@@ -474,23 +472,23 @@ main h2 {
 }
 
 .skills-chart-container h3 {
-  background-color: #1A2040;
-  color: wheat;
+  background-color: #022398; /* Cor do título h3 das habilidades */
+  color: #D2EAF3;
 }
 
 .skills div h3 {
-  background-color: #1A2040;
-  color: wheat;
+  background-color: #022398; /* Cor do título h3 das habilidades */
+  color: #D2EAF3;
 }
 
 .skills div blockquote {
-  background-color: rgba(217, 157, 143, 0.9);
+  background-color: rgba(175, 219, 255, 0.8); /* Cor do blockquote */
   border-radius: 15px;
   padding: 10px;
 }
 
 .skills div p {
-  background-color: rgba(217, 157, 143, 0.9);
+  background-color: rgba(175, 219, 255, 0.8); /* Cor do parágrafo */
   border-radius: 15px;
   padding: 10px;
 }
@@ -503,7 +501,7 @@ main h2 {
   height: auto !important;
   box-sizing: border-box;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  background-color: rgba(245, 222, 179, 0.7);
+  background-color: rgba(210, 234, 243, 0.7); /* Cor do fundo do canvas */
   border-radius: 5px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -535,7 +533,7 @@ main h2 {
   justify-content: center;
   border-bottom: #fff;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
-  background-color: rgba(245, 222, 179, 0.7);
+  background-color: rgba(210, 234, 243, 0.7); /* Cor do fundo do radar */
   border-radius: 5px;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
@@ -546,8 +544,8 @@ main h2 {
 }
 
 .tools h3 {
-  background-color: #1A2040;
-  color: wheat;
+  background-color: #022398; /* Cor do título h3 das ferramentas */
+  color: #D2EAF3;
   text-align: center;
 }
 
@@ -557,7 +555,6 @@ main h2 {
   padding: 0;
   list-style: none;
   flex-wrap: wrap;
-  /* margin: auto 100px; */
 }
 
 .tools ul {
@@ -581,7 +578,7 @@ main h2 {
   width: 100%;
   margin: 5px 25px;
   vertical-align: middle;
-  background-color: rgba(245, 222, 179, 0.5);
+  background-color: rgba(210, 234, 243, 0.5); /* Cor do fundo das imagens */
   border-radius: 5px;
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.8);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
@@ -625,7 +622,7 @@ main h2 {
 }
 
 .portfolio .tableauPlaceholder {
-  width: calc(25% - 20px); /* Alterado para 25% */
+  width: calc(25% - 20px);
   margin: 10px;
   box-sizing: border-box;
 }
@@ -633,7 +630,7 @@ main h2 {
 .portfolio .tableauPlaceholder a img {
   display: block;
   width: 100%;
-  height: auto;
+  height: 100%;
   max-height: 300px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
   border-radius: 5px;
@@ -650,12 +647,11 @@ footer {
   text-align: center;
   width: 100%;
   padding: 1px 0;
-  background-color: #333;
-  color: #fff;
+  background-color: #022398; /* Cor do rodapé */
+  color: #D2EAF3;
   position: relative;
   clear: both;
   box-sizing: border-box;
-  background-color: rgba(0, 0, 0, 0.7)
 }
 
 /* Botão Voltar ao Topo */
@@ -678,7 +674,6 @@ footer {
   cursor: pointer;
   z-index: 1000;
   transition: all 0.3s easy-in-out;
-  /* box-shadow: 0 8px 16px rgba(250, 250, 250, 0.8); */
 }
 
 .back-to-top-button:hover {
@@ -708,13 +703,13 @@ footer {
 /* Responsividade */
 @media (max-width: 1200px) {
   .portfolio .tableauPlaceholder {
-    width: calc(33.33% - 20px); /* 3 imagens por linha em telas maiores */
+    width: calc(33.33% - 20px);
   }
 }
 
 @media (max-width: 992px) {
   .portfolio .tableauPlaceholder {
-    width: calc(50% - 20px); /* 2 imagens por linha em telas médias */
+    width: calc(50% - 20px);
   }
 }
 
@@ -752,7 +747,7 @@ footer {
   }
 
   .portfolio .tableauPlaceholder {
-      width: calc(50% - 20px); /* 2 imagens por linha em telas menores */
+      width: calc(50% - 20px);
   }
 
   .portfolio .tableauPlaceholder a img {
@@ -810,11 +805,11 @@ footer {
   }
 
   .portfolio .tableauPlaceholder {
-      width: 100%; /* 1 imagem por linha em telas ainda menores */
+      width: 100%;
   }
 }
 
-/* Animação de pulso  */
+/* Animação de pulso */
 @keyframes pulse {
   0% {
       transform: scale(1);
