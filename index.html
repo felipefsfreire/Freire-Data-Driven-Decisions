@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description"
     content="Currículo online de Felipe Freire, analista de BI, dados e negócios, com expertise em SQL, Python, Tableau e Power BI.">
   <meta name="keywords"
@@ -21,7 +21,7 @@
   <!-- Indica que o navegador deve evitar armazenar em cache e carregar o conteúdo sempre atualizado -->
   <meta name="theme-color" content="#113A8C">
   <!-- Define a cor que aparece na barra do navegador ou em abas móveis -->
-  
+
   <!-- font Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,404 +34,385 @@
   <link rel="icon" type="image/png" href="favicon.png">
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/EasePack.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
+
   <header>
     <nav class="menu">
-      <div class="container">
-        <div class="menu-toggle">
-          <input type="checkbox" />
-          <span></span>
-          <span></span>
-          <span></span>
-        </div>
-        <ul class="menu-list">
-          <li><a href="#about">Sobre</a></li>
-          <li><a href="#experience">Experiência</a></li>
-          <li><a href="#skills">Competências</a></li>
-          <li><a href="#education">Formação</a></li>
-          <li><a href="#certifications">Certificações</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
-          <li class="dropdown">
-            <a href="#" class="dropbtn">Contato</a>
-            <div class="dropdown-content">
-              <a href="https://wa.me/5521986549524" target="_blank"> WhathsApp</a>
-              <a href="mailto:felipe.freire1983@gmail.com" target="_blank">E-mail</a>
-              <a href="https://www.linkedin.com/in/felipefsfreire/" target="_blank">Linkedin</a>
-              <a href="https://github.com/felipefsfreire" target="_blank">Github</a>
-            </div>
-          </li>
-        </ul>
+      <div class="logo">
+        <a href="#"></a>
       </div>
+      <button class="menu-toggle">
+        <i class="fas fa-bars"></i>
+      </button>
+      <ul class="menu-items">
+        <li><a href="#profile">Perfil</a></li>
+        <li><a href="#experience">Experiência</a></li>
+        <li><a href="#skills">Habilidades</a></li>
+        <li><a href="#tools">Ferramentas</a></li>
+        <li><a href="#educacao">Formação</a></li>
+        <!-- <li><a href="#blog">Blog</a></li> -->
+        <li><a href="#certifications">Certificações</a></li>
+      </ul>
     </nav>
-
-    <div class="container header-content">
-      <div class="profile-image">
-        <img src="img/felipe-freire.png" alt="Foto de Perfil">
-      </div>
-
-      <div class="info">
-        <h1 class="contact">Felipe Freire</h1>
-
-        <ul class="contact-list">
-          <li class="contact">
-            <a href="tel:+5521986549524" target="_blank"><img src="img/phone.jpg" alt="+55 (21)98654-9524"
-                title="+55 (21)98654-9524" class="icon"></a>
-          </li>
-          <li class="contact">
-            <a href="mailto:felipe.freire1983@gmail.com" target="_blank"><img src="img/email.jpg"
-                alt="felipe.freire1983@gmail.com" title="felipe.freire1983@gmail.com" class="icon"></a>
-          </li>
-          <li class="contact">
-            <a href="https://www.linkedin.com/in/felipefsfreire/" target="_blank"><img src="img/linkedin.png"
-                alt="www.linkedin.com/in/felipefsfreire/" title="www.linkedin.com/in/felipefsfreire/" class="icon"></a>
-          </li>
-          <li class="contact">
-            <a href="https://github.com/felipefsfreire" target="_blank"><img src="img/github.png"
-                alt="https://github.com/felipefsfreire" title="https://github.com/felipefsfreire" class="icon"></a>
-          </li>
-          <li class="contact">
-            <a href="img/FelipeFreireCurrículo.pdf" class="download-button" target="_blank">Download Currículo</a>
-          </li>
-        </ul>
-      </div>
-    </div>
   </header>
 
-  <main class="container">
-    <section id="about" class="about">
-      <h2>Meu Algoritmo</h2>
+  <div class="resume-wrapper">
+    <section id="profile" class="profile section-padding">
+      <div class="container">
+        <div class="picture-resume-wrapper">
+          <div class="picture-resume">
+            <span><img src="img/felipe-freire.png" alt="Foto de perfil" /></span>
+            <svg version="1.1" viewBox="0 0 350 350">
 
-      <div class="job-desc">
-        <p>Solucionador de problemas, analista de dados, mestre dos dashboards de KPI’s, ninja de SQL e Python,
-          comunicador de dados e craque em Tableau e Power BI. Se precisar de alguém para transformar dados em ação,
-          conte comigo!</p>
-      </div>
+              <defs>
+                <filter id="goo">
+                  <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                  <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 21 -9"
+                    result="cm" />
+                </filter>
+              </defs>
 
-    </section>
-    <section id="experience" class="experience">
-      <h2> Minha Trajetória</h2>
+              <g filter="url(#goo)">
 
-      <div class="job">
+                <circle id="main_circle" class="st0" cx="171.5" cy="175.6" r="130" />
 
-        <div class="job-content" class="cvlb">
+                <circle id="circle" class="bubble0 st1" cx="171.5" cy="175.6" r="122.7" />
+                <circle id="circle" class="bubble1 st1" cx="171.5" cy="175.6" r="122.7" />
+                <circle id="circle" class="bubble2 st1" cx="171.5" cy="175.6" r="122.7" />
+                <circle id="circle" class="bubble3 st1" cx="171.5" cy="175.6" r="122.7" />
+                <circle id="circle" class="bubble4 st1" cx="171.5" cy="175.6" r="122.7" />
+                <circle id="circle" class="bubble5 st1" cx="171.5" cy="175.6" r="122.7" />
+                <circle id="circle" class="bubble6 st1" cx="171.5" cy="175.6" r="122.7" />
+                <circle id="circle" class="bubble7 st1" cx="171.5" cy="175.6" r="122.7" />
+                <circle id="circle" class="bubble8 st1" cx="171.5" cy="175.6" r="122.7" />
+                <circle id="circle" class="bubble9 st1" cx="171.5" cy="175.6" r="122.7" />
+                <circle id="circle" class="bubble10 st1" cx="171.5" cy="175.6" r="122.7" />
 
-          <div>
-            <h3>Decifrador de Dados com Visão Estratégica (Analista de BI)</h3>
-            <h4>Grupo CVLB</h4>
-            <p class="date">Julho 2024 - Até o momento</p>
+              </g>
+            </svg>
           </div>
-
-          <p class="job-desc">Atualmente, atuo como um decifrador de dados, transformando números em insights
-            estratégicos para tomadas de decisão e projetos. Meus dashboards e relatórios ajudam a guiar as operações,
-            revelando tendências e gargalos com clareza. Com experiência em extração, tratamento e análise de dados,
-            garanto a qualidade e a consistência das informações, além de solucionar problemas relacionados a indicadores
-            com agilidade. Sou o profissional que transforma dados brutos em inteligência de negócios.</p>
+          <div class="clearfix"></div>
+        </div>
+        <div class="name-wrapper">
+          <h1>Felipe Freire</h1><!-- YOUR NAME AND LAST NAME  -->
+          <p><strong>Analista de Dados e Negócios</strong></p>
+          <a href="img/FelipeFreireCurrículo.pdf" class="download-button" target="_blank">Download Currículo</a>
 
         </div>
-
-        <div class="radar-container">
-
-          <div class="radar-chart-container">
-            <h4>Habilidades Técnicas</h4>
-            <canvas id="radarChart1T"></canvas>
-          </div>
-
-          <div class="radar-chart-container">
-            <h4>Habilidades Pessoais</h4>
-            <canvas id="radarChart1P"></canvas>
-          </div>
-
-          <p class="bolder-skill">(Habilidades em destaque: análise de dados, dashboards, indicadores, resolução de
-            problemas, visão estratégica)</p>
-
+        <div class="clearfix"></div>
+        <div class="contact-info clearfix">
+          <ul class="list-titles">
+            <li>Telefone</li>
+            <li>Email</li>
+            <li>Localização</li>
+          </ul>
+          <ul class="list-content ">
+            <li>+55 21 98654-9524</li> <!-- YOUR PHONE NUMBER  -->
+            <li>felipe.freire1983@gmail.com</li> <!-- YOUR EMAIL -->
+            <li>São João de Meriti, RJ - Brasil</li> <!-- YOUR STATE AND COUNTRY  -->
+          </ul>
         </div>
-
-      </div>
-
-      <div class="job">
-
-        <div class="job-content">
-
-          <div>
-            <h3>Arquiteto de Soluções com Foco em Resultados (Analista de Negócios Pleno)</h3>
-            <h4>iFood</h4>
-            <p class="date">Julho 2019 - Maio 2023</p>
-          </div>
-
-          <p class="job-desc">Fui um arquiteto de soluções, utilizando minha expertise em análise de dados e
-            ferramentas como Excel, SQL, Tableau e Python para otimizar processos e impulsionar resultados. Mapeei
-            fluxos com BPMN, identifiquei oportunidades de melhoria e criei apresentações claras que permitiram a
-            stakeholders entenderem e aplicarem as informações. Com pensamento analítico e foco na experiência do
-            cliente, trabalhei em equipe e entreguei soluções inovadoras que agregaram valor ao negócio. Sou o
-            profissional que conecta dados, processos e pessoas para alcançar objetivos.</p>
-
+        <div class="contact-presentation">
+          <!-- YOUR PRESENTATION RESUME  -->
+          <p><strong>Solucionador de problemas, analista de dados, mestre dos dashboards de KPI’s, ninja de SQL e Python, comunicador
+            de dados e craque em Tableau e Power BI. Se precisar de alguém para transformar dados em ação, conte comigo!</strong></p>
         </div>
-
-        <div class="radar-container">
-
-          <div class="radar-chart-container">
-            <h4>Habilidades Técnicas</h4>
-
-            <canvas id="radarChart2T"></canvas>
-          </div>
-
-          <div class="radar-chart-container">
-            <h4>Habilidades Pessoais</h4>
-
-            <canvas id="radarChart2P"></canvas>
-          </div>
-
-          <p class="bolder-skill">(Habilidades em destaque: análise de dados, Excel, SQL, Tableau, Python, BPMN,
-            otimização de processos, comunicação, foco no cliente)</p>
+        <div class="contact-social clearfix">
+          <ul class="list-titles">
+            <li>LinkedIn</li>
+            <li>GitHub</li>
+          </ul>
+          <ul class="list-content">
+            <!-- REMEMBER TO PUT THE URL ON THE HREF TAG  -->
+            <li><a href="https://www.linkedin.com/in/felipefsfreire/" target="_blank"><strong>linkedin.com/in/felipefsfreire</strong>/</a></li> <!-- YOUR TWITTER USER  -->
+            <li><a href="https://github.com/felipefsfreire" target="_blank"><strong>github.com/felipefsfreire</strong></a></li> <!-- YOUR DRIBBBLE USER  -->
+          </ul>
         </div>
-
-      </div>
-
-      <div class="job">
-
-        <div class="job-content">
-
-          <div>
-            <h3>Líder de Operações com Olhar Analítico (Gerente)</h3>
-
-            <h4>Sushi Rão</h4>
-
-            <p class="date">Janeiro 2017 - Julho 2018</p>
-          </div>
-
-          <p class="job-desc">Com uma visão analítica e foco em resultados, liderei operações, transformando desafios em
-            oportunidades. Gerenciei indicadores de desempenho, otimizei custos, controlei estoques e liderei equipes
-            com paixão e profissionalismo. Além de acompanhar de perto a experiência do cliente, desenvolvi estratégias
-            inovadoras e renovei o cardápio com base em dados. Sou o profissional que alia liderança e visão
-            estratégica para impulsionar o sucesso de qualquer negócio.</p>
-
-        </div>
-
-        <div class="radar-container">
-
-          <div class="radar-chart-container">
-            <h4>Habilidades Técnicas</h4>
-
-            <canvas id="radarChart3T"></canvas>
-          </div>
-
-          <div class="radar-chart-container">
-            <h4>Habilidades Pessoais</h4>
-
-            <canvas id="radarChart3P"></canvas>
-          </div>
-
-          <p class="bolder-skill">(Habilidades em destaque: liderança, gestão de equipes, análise de indicadores, visão
-            estratégica, foco no cliente, gestão de processos)</p>
-
-        </div>
-
       </div>
     </section>
 
-    <section id="skills" class="skills">
+    <section id="experience" class="experience section-padding">
+      <div class="container">
+        <h3 class="experience-title">Experiência</h3>
 
-      <h2>Minha Lente Analítica</h2>
+        <div class="experience-wrapper">
+          <div class="company-wrapper clearfix">
+            <div class="experience-title">Grupo CVLB</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+            <div class="time">Julho 2024 - Até o momento</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+          </div>
 
-      <div class="skills-container">
+          <div class="job-wrapper clearfix">
+            <div class="experience-title">Analista de BI</div> <!-- JOB TITLE  -->
+            <div class="company-description">
+              <p>Atualmente, atuo como um decifrador de dados, transformando números em insights estratégicos para tomadas de
+                decisão e projetos.
+                Meus dashboards e relatórios ajudam a guiar as operações, revelando tendências e gargalos com clareza.
+                Com experiência em extração, tratamento e análise de dados, garanto a qualidade e a consistência das informações,
+                além de solucionar problemas relacionados a indicadores com agilidade.
+                Sou o profissional que transforma dados brutos em inteligência de negócios.</p> <!-- JOB DESCRIPTION  -->
+            </div>
+          </div>
 
-        <div class="skills-chart-container">
-          <h3>Habilidades Técnicas</h3>
+          <div class="company-wrapper clearfix">
+            <div class="experience-title">iFood</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+            <div class="time">Julho 2019 - Maio 2023</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+          </div>
 
-          <canvas id="technicalSkillsChart"></canvas>
+          <div class="job-wrapper clearfix">
+            <div class="experience-title">Analista de Negócios Pleno</div> <!-- JOB TITLE  -->
+            <div class="company-description">
+              <p>Fui um arquiteto de soluções, utilizando minha expertise em análise de dados e ferramentas como Excel, SQL, Tableau
+                e Python
+                para otimizar processos e impulsionar resultados.
+                Mapeei fluxos com BPMN, identifiquei oportunidades de melhoria e criei apresentações claras que permitiram a
+                stakeholders
+                entenderem e aplicarem as informações. Com pensamento analítico e foco na experiência do cliente,
+                trabalhei em equipe e entreguei soluções inovadoras que agregaram valor ao negócio.
+                Sou o profissional que conecta dados, processos e pessoas para alcançar objetivos.</p> <!-- JOB DESCRIPTION  -->
+            </div>
+          </div>
+
+          <div class="company-wrapper clearfix">
+            <div class="experience-title">Sushi Rão</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+            <div class="time">Janeiro 2017 - Julho 2018</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+          </div>
+
+          <div class="job-wrapper clearfix">
+            <div class="experience-title">Gerente</div> <!-- JOB TITLE  -->
+            <div class="company-description">
+              <p>Com uma visão analítica e foco em resultados, liderei operações, transformando desafios em oportunidades.
+                Gerenciei indicadores de desempenho, otimizei custos, controlei estoques e liderei equipes com paixão e
+                profissionalismo.
+                Além de acompanhar de perto a experiência do cliente, desenvolvi estratégias inovadoras e renovei o cardápio com
+                base em dados.
+                Sou o profissional que alia liderança e visão estratégica para impulsionar o sucesso de qualquer negócio.</p>
+              <!-- JOB DESCRIPTION  -->
+            </div>
+          </div>
+
+        </div>
+        <!--Skill experience-->
+
+        <div id="skills" class="section-wrapper clearfix">
+          <h3 class="section-title">Habilidades Técnicas</h3> <!-- YOUR SET OF SKILLS  -->
+          <ul>
+            <li class="skill-percentage">Ferramentas de BI</li>
+            <li class="skill-percentage">Apresentação de KPI´s</li>
+            <li class="skill-percentage">SQL e Python</li>
+            <li class="skill-percentage">Análise de Dados</li>
+            <li class="skill-percentage">Mapeamento e Otimização de Processos</li>
+            <li class="skill-percentage">Visualização de Dados</li>
+            <li class="skill-percentage">Modelagem de Dados</li>
+
+          </ul>
+
         </div>
 
-        <div class="skills-chart-container">
-          <h3>Habilidades Pessoais</h3>
+        <div class="section-wrapper clearfix">
+          <h3 class="section-title">Habilidades Pessoais</h3> <!-- DESCRIPTION OF YOUR HOBBIES -->
+          <ul>
+            <li class="skill-percentage-p">Comunicação Eficaz</li>
+            <li class="skill-percentage-p">Liderança</li>
+            <li class="skill-percentage-p">Resolução de Problemas</li>
+            <li class="skill-percentage-p">Trabalho em Equipe</li>
+            <li class="skill-percentage-p">Gestão de Tempo</li>
+            <li class="skill-percentage-p">Orientação ao Cliente</li>
+            <li class="skill-percentage-p">Pensamento Crítico</li>
 
-          <canvas id="personalSkillsChart"></canvas>
+          </ul>
         </div>
 
       </div>
+      <div id="educacao">
+        <h3 class="experience-title">Formação</h3>
 
+        <div class="experience-wrapper">
+          <div class="company-wrapper clearfix">
+            <div class="experience-title">Ciência de Dados</div> <!-- NAME OF THE COMPANY YOUWORK WITH  -->
+            <div class="time">Fevereiro 2024 - Até Julho 2026</div> <!-- THE TIME YOU WORK WITH THE COMPANY  -->
+          </div>
+
+          <div class="job-wrapper clearfix">
+            <div class="experience-title">Descomplica Faculdade Digital</div> <!-- JOB TITLE  -->
+            <div class="company-description">
+              <p>(Cursando)</p> <!-- JOB DESCRIPTION  -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="certifications" class="section-certification">
+        <h3 class="section-title">Certificações</h3>
+        <ul>
+          <li class="certicication">Tableau – Udemy</li>
+          <li class="certicication">Gestão de Projetos – FGV</li>
+          <li class="certicication">Curso de Extensão em Data Science, IA e Big Data – PUCRS</li>
+          <li class="certicication">Curso de Extensão em E-Commerce e Varejo Eletrônico – PUCRS</li>
+        </ul>
+      </div>
       <div>
-        <h3>Meu Kit de Superpoderes: Habilidades que Transformam Desafios em Resultados</h3>
+        <div id="tools" class="section-certification">
+          <h3 class="section-title">Ferramentas</h3>
+          <h4 class="section-title">Meu Kit de Superpoderes: Habilidades que Transformam Desafios em Resultados</h4>
 
-        <blockquote>Não sou apenas um analista de dados, sou um verdadeiro colecionador de superpoderes que combinam
-          técnica e talento para entregar resultados incríveis. Minhas habilidades são meu arsenal secreto, e com elas
-          eu navego no mundo dos dados com maestria.</blockquote>
+          <blockquote>Não sou apenas um analista de dados, sou um verdadeiro colecionador de superpoderes que combinam
+            técnica e talento para entregar resultados incríveis. Minhas habilidades são meu arsenal secreto, e com elas
+            eu navego no mundo dos dados com maestria.</blockquote>
+        </div>
+
+        <div>
+          <p>Sou um analista estratégico que respira dados, com visão de negócios e um arsenal de habilidades técnicas
+            para transformar desafios em resultados. Minha missão? Desvendar o potencial oculto nos dados e gerar insights
+            que impulsionam decisões inteligentes e a sua vantagem competitiva.
+
+            Com minha expertise em <strong>análise de dados</strong>, mergulho nas informações como um detetive em busca
+            de tesouros, <strong>transformando números em narrativas claras com ferramentas de BI</strong> (Tableau, Power
+            BI). Crio dashboards e relatórios que guiam equipes e gestores com confiança.
+
+            Com <strong>SQL e Python</strong>, sou o mestre da automação, agilizando processos e <strong>transformando
+              dados em inteligência acionável</strong>. Sou também um estrategista, que analisa indicadores, otimiza custos
+            e impulsiona o crescimento. E para que todos entendam o poder dos dados, <strong>comunico indicadores de forma
+              clara e envolvente</strong>.
+
+            Sou um <strong>solucionador de problemas</strong>, orientado ao cliente e um parceiro de equipe que prioriza o
+            <strong>trabalho cross-functional</strong>.
+
+            Sou o analista que une técnica, visão e habilidades interpessoais para <strong>transformar dados em
+              resultados</strong>. Se você busca um profissional que descomplique seus dados e impulsione seu negócio, me
+            encontrou!</p>
+        </div>
       </div>
 
-      <div>
-        <p>Sou um analista estratégico que respira dados, com visão de negócios e um arsenal de habilidades técnicas
-          para transformar desafios em resultados. Minha missão? Desvendar o potencial oculto nos dados e gerar insights
-          que impulsionam decisões inteligentes e a sua vantagem competitiva.
-
-          Com minha expertise em <strong>análise de dados</strong>, mergulho nas informações como um detetive em busca
-          de tesouros, <strong>transformando números em narrativas claras com ferramentas de BI</strong> (Tableau, Power
-          BI). Crio dashboards e relatórios que guiam equipes e gestores com confiança.
-
-          Com <strong>SQL e Python</strong>, sou o mestre da automação, agilizando processos e <strong>transformando
-            dados em inteligência acionável</strong>. Sou também um estrategista, que analisa indicadores, otimiza custos
-          e impulsiona o crescimento. E para que todos entendam o poder dos dados, <strong>comunico indicadores de forma
-            clara e envolvente</strong>.
-
-          Sou um <strong>solucionador de problemas</strong>, orientado ao cliente e um parceiro de equipe que prioriza o
-          <strong>trabalho cross-functional</strong>.
-
-          Sou o analista que une técnica, visão e habilidades interpessoais para <strong>transformar dados em
-            resultados</strong>. Se você busca um profissional que descomplique seus dados e impulsione seu negócio, me
-          encontrou!</p>
-      </div>
-    </section>
-
-    <div class="tools">
-      <h3>Ferramentas</h3>
-      <ul class="tools-list">
-        <li class="tools-item">
-          <img src="img/tableau.png" alt="Logo Tableau" title="Tableau" class="tools-icon">
-        </li>
-        <li class="tools-item">
-          <img src="img/Excel.png" alt="Logo Excel" title="Microsoft Excel" class="tools-icon">
-        </li>
-        <li class="tools-item">
-          <img src="img/PowerPoint.png" alt="Logo PowerPoint" title="Microsoft PowerPoint" class="tools-icon">
-        </li>
-        <li class="tools-item">
-          <img src="img/Word.png" alt="Logo Word" title="Microsoft Word" class="tools-icon">
-        </li>
-        <li class="tools-item">
-          <img src="img/power-bi.png" alt="Logo Power BI" title="Microsoft Power BI" class="tools-icon">
-        </li>
-      </ul>
-      <ul class="tools-list">
-        <li class="tools-item">
-          <img src="img/sql.png" alt="Logo SQL" title="SQL" class="tools-icon">
-        </li>
-        <li class="tools-item">
-          <img src="img/python.png" alt="Logo Python" title="Python" class="tools-icon">
-        </li>
-        <li class="tools-item">
-          <img src="img/html-logo.png" alt="Logo HTML5" title="HTML5" class="tools-icon">
-        </li>
-        <li class="tools-item">
-          <img src="img/CSS3.png" alt="Logo CSS3" title="CSS3" class="tools-icon">
-        </li>
-        <li class="tools-item">
-          <img src="img/JS.png" alt="Logo JavaScript" title="JavaScript" class="tools-icon">
-        </li>
-      </ul>
-
-    </div>
-
-    <div class="side-by-side-sections">
-
-      <section id="education" class="education">
-
-        <h2>Database</h2>
-
-        <div class="education-item">
-          <h3>Ciência de Dados — Descomplica Faculdade Digital (Cursando)</h3>
-
-          <p></p>
-        </div>
-
-        <div class="education-item">
-          <h3>Técnico Informática — Colégio Ludolf Reis</h3>
-
-          <p></p>
-        </div>
-
-      </section>
-
-      <section id="certifications" class="certifications">
-
-        <h2>Aprimorando Minhas Habilidades</h2>
-
-        <div class="certification-item">
-          <h3>Tableau – Udemy</h3>
-
-          <p></p>
-        </div>
-
-        <div class="certification-item">
-          <h3>Gestão de Projetos – FGV</h3>
-
-          <p></p>
-        </div>
-
-        <div class="certification-item">
-          <h3>Curso de Extensão em Data Science, IA e Big Data – PUCRS</h3>
-
-          <p></p>
-        </div>
-
-        <div class="certification-item">
-          <h3>Curso de Extensão em E-Commerce e Varejo Eletrônico – PUCRS</h3>
-
-          <p></p>
-        </div>
-
-      </section>
-
-    </div>
-
-    <section id="portfolio" class="portfolio">
-      <h2>Meus Projetos</h2>
-
-      <div class="tableau-container">
-
-        <div class='tableauPlaceholder'>
-          <a
-            href="https://public.tableau.com/views/CaseCapitalShareBike/CaseCapitalShareBike?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-            target="_blank">
-            <img src="img/Portfolio-tableau.png" alt="Tableau Public" title="Case Capital Share Bike Tableau Public">
-          </a>
-        </div>
-
-        <div class='tableauPlaceholder'>
-          <a
-            href="https://public.tableau.com/views/NBA_17379513482270/NBAMetricsDashboard?:language=pt-BR&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
-            target="_blank">
-            <img src="img/Portfolio-tableau.png" alt="Tableau Public" title="NBA Metrics Dashboard">
-          </a>
-        </div>
-
-        <div class='tableauPlaceholder'>
-          <a
-            href="https://github.com/felipefsfreire/PyChallenges" target="_blank">
-            <img src="img/Gemini_Py_Challengs.jpeg" alt="Portfólio Python" title="Análises em Python">
-          </a>
-        </div>
-
-        <div class='tableauPlaceholder'>
-          <a
-            href="https://github.com/felipefsfreire/SQLanalysis" target="_blank">
-            <img src="img/Gemini_SQL.jpeg" alt="Portfólio SQL" title="Análises em SQL">
-          </a>
-        </div>
-
-      </div>
-
-    </section>
-    <p></p>
-    <section>
-      <div class="info">
-        <ul class="contact-list">
-          <li class="contact">
-            <a href="img/FelipeFreireCurrículo.pdf" class="download-button"target="_blank">Download Currículo</a>
+      <div class="container">
+        
+        <ul class="tools-list">
+          <li class="tools-item">
+            <img src="img/tableau.png" alt="Logo Tableau" title="Tableau" class="tools-icon">
+          </li>
+          <li class="tools-item">
+            <img src="img/Excel.png" alt="Logo Excel" title="Microsoft Excel" class="tools-icon">
+          </li>
+          <li class="tools-item">
+            <img src="img/PowerPoint.png" alt="Logo PowerPoint" title="Microsoft PowerPoint" class="tools-icon">
+          </li>
+          <li class="tools-item">
+            <img src="img/Word.png" alt="Logo Word" title="Microsoft Word" class="tools-icon">
+          </li>
+          <li class="tools-item">
+            <img src="img/power-bi.png" alt="Logo Power BI" title="Microsoft Power BI" class="tools-icon">
+          </li>
+          <li class="tools-item">
+            <img src="img/sql.png" alt="Logo SQL" title="SQL" class="tools-icon">
+          </li>
+          <li class="tools-item">
+            <img src="img/python.png" alt="Logo Python" title="Python" class="tools-icon">
+          </li>
+          <li class="tools-item">
+            <img src="img/html-logo.png" alt="Logo HTML5" title="HTML5" class="tools-icon">
+          </li>
+          <li class="tools-item">
+            <img src="img/CSS3.png" alt="Logo CSS3" title="CSS3" class="tools-icon">
+          </li>
+          <li class="tools-item">
+            <img src="img/JS.png" alt="Logo JavaScript" title="JavaScript" class="tools-icon">
           </li>
         </ul>
-
       </div>
     </section>
-    
-  </main>
+<!-- 
+    <section id="portfolio" class="portfolio section-padding">
+      <div class="container">
+        <h3 class="experience-title">Meus Projetos</h3>
 
-  <a href="#" id="back-to-top" class="back-to-top-button pulse" title="Voltar ao topo"><img src="img/to_top.png" alt=""></a>
+        <div class="tableau-container">
 
-  <script src="script.js"></script>
+          <div class='tableauPlaceholder'>
+            <a
+              href="https://public.tableau.com/views/CaseCapitalShareBike/CaseCapitalShareBike?:language=pt-BR&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+              target="_blank">
+              <img src="img/Portfolio-tableau.png" alt="Tableau Public"
+                title="Case Capital Share Bike Tableau Public">
+            </a>
+          </div>
+
+          <div class='tableauPlaceholder'>
+            <a
+              href="https://public.tableau.com/views/NBA_17379513482270/NBAMetricsDashboard?:language=pt-BR&publish=yes&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"
+              target="_blank">
+              <img src="img/Portfolio-tableau.png" alt="Tableau Public" title="NBA Metrics Dashboard">
+            </a>
+          </div>
+
+          <div class='tableauPlaceholder'>
+            <a href="https://github.com/felipefsfreire/PyChallenges" target="_blank">
+              <img src="img/Gemini_Py_Challengs.jpeg" alt="Portfólio Python" title="Análises em Python">
+            </a>
+          </div>
+
+          <div class='tableauPlaceholder'>
+            <a href="https://github.com/felipefsfreire/SQLanalysis" target="_blank">
+              <img src="img/Gemini_SQL.jpeg" alt="Portfólio SQL" title="Análises em SQL">
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section id="blog" class="blog section-padding">
+      <div class="container">
+        <h3 class="experience-title">Blog</h3>
+        <p>Aqui você encontra links para artigos e recursos que considero relevantes para quem atua ou se interessa pelas
+          áreas de análise de dados e negócios.</p>
+        <ul>
+          <li><a href="#">Link para um artigo interessante sobre análise de dados</a></li>
+          <li><a href="#">Link para um recurso útil sobre Power BI</a></li>
+          <li><a href="#">Link para um artigo sobre tendências de negócios</a></li>
+        </ul>
+      </div>
+    </section> -->
+
+    <div class="clearfix"></div>
+  </div>
+
+  <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
 
   <footer>
     <p>© 2024 Felipe Freire. Todos os direitos reservados.</p>
   </footer>
+
+  <script src="script.js"></script>
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const menuItems = document.querySelector('.menu-items');
+
+    menuToggle.addEventListener('click', () => {
+      menuItems.classList.toggle('active');
+    });
+
+    // Back to top button
+    const backToTopButton = document.querySelector('.back-to-top');
+
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('show');
+      } else {
+        backToTopButton.classList.remove('show');
+      }
+    });
+
+    backToTopButton.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
 </body>
 
 </html>
