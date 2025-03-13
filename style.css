@@ -298,6 +298,15 @@ header {
   width: 70%;
 }
 
+.company-logo {
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 100px;
+  vertical-align: middle;
+  margin-right: 0.25em;
+  /* Ajuste conforme necessário */
+}
+
 @media (max-width: 1500px) {
   .profile .picture-resume img {
     width: 80px;
